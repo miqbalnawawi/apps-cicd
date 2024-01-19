@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'GIT_REPO_URL', defaultValue: , description: 'Git repository URL')
+        string(name: 'GIT_REPO_URL', defaultValue: "https://github.com/miqbalnawawi/nodejs-sample.git", description: 'Git repository URL')
     }
     tools {
         maven 'maven_3_5_0'
