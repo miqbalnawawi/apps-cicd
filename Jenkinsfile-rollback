@@ -20,6 +20,17 @@ pipeline {
                 }
             }
         }
-        // Additional stages can be added here
+        stage('Push image to Hub') {
+            steps {
+                script {
+                    withCredentials([string(credentialsId: 'dockerhub-credential-id', variable: 'dockerhubpwd')]) {
+                        sh 'docker login -u miqbalnawawi -p '
+                    }
+                    sh 'docker push miqbalnawawi/devops-integration'
+                }
+            }
+        }
+    }
+}
     }
 }
