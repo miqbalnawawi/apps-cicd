@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'GIT_REPO_URL', defaultValue: "https://github.com/miqbalnawawi/devops-automation.git", description: 'Git repository URL')
+        string(name: 'GIT_REPO_URL', defaultValue: "https://github.com/miqbalnawawi/apps-cicd.git", description: 'Git repository URL')
     }
     tools {
         maven 'maven_3_5_0'
